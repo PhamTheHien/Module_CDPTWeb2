@@ -1,0 +1,26 @@
+$bg_color:#b04746;
+$content_color:white;
+$f-13:13px;
+$f-size:30px;
+$f-bt:4px;
+.type-8{
+    .btn{
+        &::before{
+                content: "\002B";
+                padding-left: $f-13;
+                padding-top: 0;
+                padding-right: $f-13;
+                padding-bottom: $f-bt;
+                background-color: $bg_color;
+                text-align: center;
+                font-size: $f-size;
+                color:$content_color ;
+            }
+        }
+    .content{
+        &::before {
+            content: "\2212";
+        }
+    }
+}
+

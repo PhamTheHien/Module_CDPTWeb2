@@ -1,0 +1,191 @@
+$color-fb: #1c77c3;
+$color-twit:#1da1f2;
+$color-whats: #25d366;
+$color-vk: #45668e;
+$color-web: #a83332;
+@mixin icon_hover($color) {
+    background-color: $color;
+}
+%icon-content{
+    transition: all .15s ease-in-out;
+    cursor: pointer;
+    border-radius: 3px ;
+    background-color: rgba(0,0,0,.1);
+    color: white;
+}
+%after-icon{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 3px ;
+    z-index: -1;
+    transition: all .15s ease-in-out;
+    top: 0%;
+}
+%anima{
+    top: 100%;
+}
+%show_item_menu{
+    animation: ani_link;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+@keyframes ani_link{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.type-2{
+    .module{
+        font-size: 14px;
+    }
+    .header-web{
+        background-image: linear-gradient(to bottom,#fff 0%,#f4f4f4 100%);
+        position: inherit;
+        z-index: -11;
+    }
+    .header-tools{
+        z-index: 1;
+        .fb-icon{
+            @extend %icon-content;
+            &::after{
+                @include icon_hover($color-fb);
+                @extend %after-icon;
+            }
+            &:hover{
+                color: $color-fb;
+                &::after{
+                    @extend %anima;
+                }
+            }
+        }
+        .twit-icon{
+            @extend %icon-content;
+            .icon_pad{
+                padding: 5px 5px;
+            }
+            &::after{
+                @include icon_hover($color-twit);
+                @extend %after-icon;
+            }
+            &:hover{
+                color: $color-twit;
+                &::after{
+                    @extend %anima;
+                }
+            }
+        }
+        .whats-icon{
+            @extend %icon-content;
+            .icon_pad{
+                padding: 5px 6px;
+            }
+            &::after{
+                @include icon_hover($color-whats);
+                @extend %after-icon;
+            }
+            &:hover{
+                color: $color-whats;
+                &::after{
+                    @extend %anima;
+                }
+            }
+        }
+        .vk-icon{
+            @extend %icon-content;
+            &::after{
+                @include icon_hover($color-vk);
+                @extend %after-icon;
+            }
+            &:hover{
+                color: $color-vk;
+                &::after{
+                    @extend %anima;
+                }
+            }
+        }
+    }
+    .infor-website{
+
+        color: $color-web;
+        cursor: pointer;
+        &::before{
+            content: '';
+            border-left: 1px solid;
+            height: 80%;
+            margin: auto;
+        }
+        &::after{
+            content: '';
+            border-left: 1px solid;
+            height: 80%;
+            margin: auto;
+        }
+    }
+    .btn-login{
+        outline: none !important;
+        background-color: $color-web;
+        color: white !important;
+        font-size: 14px;
+        height: 30px;
+    }
+    .nav-header{
+        border-bottom: 4px solid $color-web ;
+        .border-item{
+            display: flex;
+            &::before{
+                content: '';
+                border-left: 1px solid #808080;
+                height: 40%;
+                margin: auto
+            }
+            &:hover{
+                background-color:#575757;
+            }
+        }
+        .search-nav{
+            cursor: pointer;
+            color: white;
+            background-color: #374147;
+            padding: 8px 12px;
+        }
+        .item-link{
+            color: white !important;
+        }
+        .dropdown-item-nav{
+            .list-item{
+                @extend %show_item_menu;
+                top: 96%;
+            }
+            &:hover{
+                .list-item{
+                    display: block;
+                }
+            }
+        }
+        .list-chid{
+            .drop-menu-chid1{
+                top: 0%;
+                left: 100%;
+            }
+            .drop-menu-chid2{
+                top: 46%;
+                left: 100%;
+            }
+            .list-item-chid{
+                @extend %show_item_menu;
+            }
+            &:hover{
+                .list-item-chid{
+                    display: block;
+                }
+            }
+        }
+        
+    }
+}
