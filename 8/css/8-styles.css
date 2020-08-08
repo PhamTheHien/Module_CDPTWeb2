@@ -1,0 +1,57 @@
+.type-8 .title {
+  color: #fff;
+  background-color: black; }
+  .type-8 .title .p-title {
+    margin-left: 35px; }
+.type-8 .menu {
+  background-color: #ebebeb; }
+  .type-8 .menu .bread {
+    list-style-type: none; }
+    .type-8 .menu .bread .item-bread {
+      display: inline-block;
+      width: 120px;
+      height: 40px;
+      line-height: 40px; }
+      .type-8 .menu .bread .item-bread .icons {
+        font-size: 10px;
+        color: #636363; }
+      .type-8 .menu .bread .item-bread .item {
+        text-decoration: none;
+        font-family: "Roboto Slab";
+        color: #636363;
+        font-style: normal;
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 26px; }
+        .type-8 .menu .bread .item-bread .item:hover {
+          color: #a83332; }
+.type-8 * {
+  box-sizing: border-box;
+  /* Style the tab */ }
+.type-8 .tab {
+  background-color: #f1f1f1;
+  /* Style the buttons inside the tab */ }
+.type-8 .tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+  /* Change background color of buttons on hover */ }
+.type-8 .tab button:hover {
+  background-color: #ddd;
+  /* Create an active/current "tab button" class */ }
+.type-8 .tab button.active {
+  background-color: #fff;
+  border-left: 3px solid #b04746;
+  /* Style the tab content */ }
+.type-8 .tabcontent {
+  padding: 0px 12px;
+  width: 70%;
+  border-left: none;
+  height: 300px; }
